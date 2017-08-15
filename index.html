@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta charset="utf-8">
+  <title>Curso de HTML5 Avanzado: Progressive Web Apps de EDteam por @jonmircha</title>
+  <meta name="description" content="Esta presentación contiene toda la teoría y es una referencia temática del Curso de HTML5 Avanzado: Progressive Web Apps impartido por Jonathan MirCha">
+  <meta name="author" content="Jonathan MirCha">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="./img/HTML5.png">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="corner c-tl"><img src="img/edteam-logo.png" alt="EDteam" style="max-width: 70%;" /></div>
+  <div class="corner c-tr"><img src="img/HTML5.svg" alt="HTML5" style="max-width: 20%;" /></div>
+  <div class="corner c-bl"><p><img src="http://bextlan.com/img/jonmircha.jpg" style="max-width: 50px; border-radius:100%;"> <span>Jonathan MirCha - @jonmircha</span></p></div>
+  <div class="corner c-br"><p>Curso HTML5 Avanzado: Progressive Web Apps</p></div>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <p style="font-size: 150%;"><b>Curso HTML5 Avanzado</b></p>
+        <p style="font-size: 110%;"><b>Progressive Web Apps</b></p>
+        <div><img src="img/HTML5.svg" alt="HTML5" style="border:0; box-shadow:none; max-width:20%; background-color: transparent;"></div>
+        <p>
+          de <b><a href="http://ed.team/" target="_blank">EDteam</a></b>
+          por <a href="http://twitter.com/jonmircha" target="_blank">@jonmircha</a>
+        </p>
+        <p>
+          <a href="http://jonmircha.github.io/edhtml5-pwa2017" target="_blank">TEORÍA</a>
+          y
+          <a href="https://github.com/jonmircha/edhtml5-pwa2017" target="_blank">CÓDIGOS</a>
+        </p>
+      </section>
+      <section>
+        <figure>
+          <figcaption>
+            <a href="http://jonmircha.com" target="_blank">Jonathan MirCha</a><br>
+            <b>Instructor Web & Arquitecto de Front end.</b><br>
+            Entusiasta de la educación digital.
+            Dirijo <a href="http://bextlan.com" target="_blank">Bextlán</a>.<br>
+            Maratonista(x10) Fitness. <a href="http://www.celiacos.org/enfermedad-celiaca.html" target="_blank">Celiaco</a> por amor.
+          </figcaption>
+          <img src="http://bextlan.com/img/jonmircha.jpg" style="height: auto; max-width: 400px;"></a>
+        </figure>
+      </section>
+      <section>
+        <h2>Temas:</h2>
+        <ol style="font-size: 90%;">
+          <li><a href="#/3">Introducción a las PWA's</a></li>
+          <li><a href="#/39">Tecnologías Core de las PWA's</a></li>
+          <li><a href="#/">Desarrollando una PWA</a></li>
+        </ol>
+      </section>
+      <section>
+        <p style="font-size: 150%;">
+          <b>Progressive Web Apps (PWA's)</b>
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué son PWA's?</b>
+        </p>
+        <p>
+          Son experiencias que combinan lo mejor de la Web y lo mejor de las apps nativas.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué son PWA's?</b>
+        </p>
+        <p>
+          Están disponibles para los usuarios a partir de la primera visita en una pestaña del navegador y no requieren instalación.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué son PWA's?</b>
+        </p>
+        <p>
+          A medida que el usuario compila progresivamente una relación con la app o con el paso del tiempo, se hace más y más poderosa.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué son PWA's?</b>
+        </p>
+        <p>
+          Se carga rápidamente, incluso con redes débiles, envía notificaciones push relevantes, tiene un ícono en la pantalla principal y se carga como experiencia de pantalla completa y de primer nivel.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué son PWA's?</b>
+        </p>
+        <p>
+          <a href="https://ed.team/blog/aplicaciones-web-progresivas-la-evolucion-del-diseno-responsivo" target="_blank">También puedes leer éste artículo</a>
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Progresiva</b>: funciona para todos los usuarios, sin importar la elección de navegador, porque está construida con mejora progresiva como principio central.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Adaptable:</b> se adapta a cualquier factor de formulario, sea escritorio, móvil, tablet o lo que venga en el futuro.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Independiente de la conectividad:</b> mejorada con service workers para trabajar sin conexión o con redes de mala calidad.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Estilo App:</b> al usuario le parece una app con interacciones y navegación estilo app, porque está construida con modelo de shell de app.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Fresca:</b> siempre actualizada gracias al proceso de actualización de service worker.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Segura:</b> emitida vía HTTPS para evitar intromisiones y para garantizar que el contenido no se haya manipulado.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Descubrible:</b> se puede identificar como "app" gracias al manifiesto W3C y al alcance de registro de service worker, lo que permite que los motores de búsqueda la encuentren.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Notificable:</b> facilita la posibilidad de volver a interactuar a través de funciones como notificaciones push.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Instalable:</b> les permite a los usuarios "conservar" las apps que les resultan más útiles en su pantalla principal sin la molestia de una tienda de app.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Características PWA's</b>
+        </p>
+        <p>
+          <b>Vinculable:</b> se puede compartir fácilmente vía URL, no requiere instalación compleja.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Necesito una PWA?</b>
+        </p>
+        <ul>
+          <li>¿Quién es mi actual audiencia?</li>
+          <li>¿Quién es mi audiencia objetivo?</li>
+          <li>¿Qué tanto cambia?</li>
+          <li>¿Tienen los mismos requerimientos?</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Necesito una PWA?</b>
+        </p>
+        <ul>
+          <li>¿Requiero interactuar con datos?</li>
+          <li>¿Qué plataformas son mi prioridad?</li>
+          <li>¿Qué conexiones usan mis usuarios?</li>
+          <li>¿Mis usuarios pagarán por algún servicio?</li>
+          <li>¿Cómo lo pagarán?</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Dónde y cuándo se usará mi PWA?</b>
+        </p>
+        <ul>
+          <li>¿Exteriores, Interiores?</li>
+          <li>¿En casa, en oficina, en el transporte, en el carro?</li>
+          <li>¿Caminando, sentado, de pié, esperando?</li>
+          <li>¿Requerirá la atención del usuario?</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Entendiende los requerimientos</b>
+        </p>
+        <ul>
+          <li>Rendimiento</li>
+          <li>Funcionalidad</li>
+          <li>Contenido</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Diseño del Contenido</b>
+        </p>
+        <ul>
+          <li>¿Cómo se escribe para la web?</li>
+          <li>¿Como lée la gente en la web?</li>
+          <li>Adapata tus textos, imágenes y multimedia</li>
+          <li>Prioriza contenido</li>
+          <li>¡Piensa en APP!</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Contenido para la web</b>
+        </p>
+        <ul>
+          <li>La gente no lée, ¡Escanéa!</li>
+          <li>La gente lée entre el 20% y 30% del contenido</li>
+          <li>Leer en pantallas es más lento que en papel</li>
+          <li>Manten tus puntos principales al principio</li>
+          <li>
+            En pocas palabrás:
+            <ul>
+                <li><b>Sé simple, ordenado y vé al grano</b></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Diseño de Código y Datos</b>
+        </p>
+        <ul>
+          <li>Reduce y optimiza interacción de datos</li>
+          <li>Reduce y optimiza peticiones</li>
+          <li>Optimiza tus contenidos (textos y multimedia)</li>
+          <li>Separa y estructura tu código (<small>HTML, CSS & JS</small>)</li>
+          <li>Separa y estructura tu código (<small>también el Backend</small>)</li>
+          <li>Valida tu código (<small>Frontend & Backend</small>)</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <ul>
+          <li>
+            Distribución
+            <ul>
+              <li><small>es el principal problema con el software</small></li>
+            </ul>
+          </li>
+          <li>
+            Rápido es mejor
+            <ul>
+              <li><small>40% de usuarios salen de los sitios cuando tardán más de 3s en cargar</small></li>
+            </ul>
+          </li>
+          <li>Adquisición y Conversión de Usuarios</li>
+          <li>Costos más baratos que las apps nativas</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-ali-express.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-ali-express2.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-konga.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-airberlin.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-washington-post.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <img src="./img/why-logos.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Porqué hacer una PWA?</b>
+        </p>
+        <ul>
+          <li><a href="https://pwa.rocks/" target="_blank">pwa.rocks</a></li>
+          <li><a href="https://pwa-directory.appspot.com/" target="_blank">pwa directory</a></li>
+          <li><a href="https://www.chromeexperiments.com/" target="_blank">Chrome Experiments</a></li>
+          <li><a href="https://www.mozilla.org/es-ES/" target="_blank">Mozilla</a></li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Herramientas de Desarrollo para PWA's</b>
+        </p>
+        <ul>
+          <li>Chrome</li>
+          <ul>
+            <li><small>chrome://flags/#enable-experimental-web-platform-features</small></li>
+            <li><small>Chrome Dev Tools (Pestaña <i>Application</i>)</small></li>
+          </ul>
+          <li>Un servidor Web
+            <ul>
+              <li><small><a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server for Chrome</a></small></li>
+            </ul>
+          </li>
+          <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank">Lighthouse</a></li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Herramientas de Desarrollo para PWA's</b>
+        </p>
+        <img src="./img/devtools-manifest.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Herramientas de Desarrollo para PWA's</b>
+        </p>
+        <img src="./img/devtools-sw.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Herramientas de Desarrollo para PWA's</b>
+        </p>
+        <img src="./img/devtools-cache.png">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>¿Qué puede hacer la web hoy?</b>
+        </p>
+        <div>
+          <img src="./img/pleca-html5.png" style="border:0; box-shadow:none; background-color: transparent;">
+        </div>
+        <ul>
+          <li><a href="https://www.w3.org/" target="_blank">W3C</a> & <a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+          <li><a href="https://www.w3.org/html/logo/" target="_blank">HTML5</a> & <a href="https://www.html5rocks.com/" target="_blank">HTML5 Rocks</a></li>
+          <li><a href="https://caniuse.com/" target="_blank">Can I use?</a></li>
+          <li><a href="https://whatwebcando.today/" target="_blank">What Web Can Do Today</a></li>
+        </ul>
+        <p><a href="#/2">&lt;&lt; regresar al temario</a></p>
+      </section>
+      <section>
+        <p style="font-size: 150%;">
+          <b>Tecnologías Core PWA's</b>
+        </p>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+</body>
+</html>
