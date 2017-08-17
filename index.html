@@ -244,7 +244,7 @@
         <ul>
           <li>¿Cómo se escribe para la web?</li>
           <li>¿Como lée la gente en la web?</li>
-          <li>Adapata tus textos, imágenes y multimedia</li>
+          <li>Adapta tus textos, imágenes y multimedia</li>
           <li>Prioriza contenido</li>
           <li>¡Piensa en APP!</li>
         </ul>
@@ -402,6 +402,335 @@
         <p style="font-size: 150%;">
           <b>Tecnologías Core PWA's</b>
         </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Tecnologías Core PWA's</b>
+        </p>
+        <ol>
+          <li>Responsive Design</li>
+          <li>App Shell Architecture</li>
+          <li>Manifest.json</li>
+          <li>Service Worker API</li>
+          <li>Storage & Offline Support</li>
+          <li>Push & Notifications API</li>
+          <li>... y todo lo que la web pueda hacer</li>
+        </ol>
+        <ul>
+          <li><small>Mención especial ES6 (Promesas y Fetch)</small></li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <a href="https://ed.team/blog/todo-lo-que-debes-saber-sobre-el-responsive-web-design" target="_blank">También puedes leer éste artículo</a>
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          Buenas prácticas de CSS
+        </p>
+        <ol>
+          <li>Maquetación Fluída</li>
+          <li>Multimedios Flexibles</li>
+          <li>Uso de Media Queries</li>
+        </ol>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Maquetación Fluída</b>
+        </p>
+        <p>
+          Nunca haga que los usuarios se desplacen horizontalmente
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Maquetación Fluída</b>
+        </p>
+        <p>
+          Usa el Viewport
+        </p>
+        <img src="./img/rwd-viewport.png" class="sin-fondo">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Multimedios Flexibles</b>
+        </p>
+        <ul>
+          <li>Evita imágenes siempre que sea posible</li>
+          <li>Utiliza formatos vectoriales cuando sea posible</li>
+          <li>Utiliza resolución y calidad más baja posible</li>
+          <li>Utiliza el formato adecuado para el tipo de imagen<br>(<small>WebP, PNG, JPEG, GIF</small>)</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Multimedios Flexibles</b>
+        </p>
+        <ul>
+          <li>
+            <a href="https://escss.blogspot.mx/2014/10/responsive-images-picture-srcset.html" target="_blank">Elementos & Atributos</a>
+            <ul>
+              <li>picture</li>
+              <li>source</li>
+              <li>srcset</li>
+              <li>sizes</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Mediaqueries</b>
+        </p>
+        <img src="./img/rwd-mediaqueries.png" class="sin-fondo" style="max-width: 50%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Breakpoints</b>
+        </p>
+        <img src="./img/rwd-breakpoints.png" class="sin-fondo" style="max-width: 50%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Responsive Design</b>
+        </p>
+        <p>
+          <b>Mediaqueries con JavaScript</b>
+        </p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia" target="_blank">Window.matchMedia()</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList" target="_blank">MediaQueryList</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListListener" target="_blank">MediaQueryListListener</a></li>
+          <li><a href="https://www.youtube.com/watch?v=sudFVYXWGD8" target="_blank">VideoTutorial</a></li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <img src="./img/app-shell.png" class="sin-fondo" style="max-width: 60%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          Es el mínimo HTML, CSS y JavaScript que se requiere para alimentar la interfaz de usuario de una PWA y es uno de los componentes que garantiza un buen rendimiento fiable.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          Su primera carga debe ser extremadamente rápida e inmediatamente almacenada en caché.
+        </p>
+        <p>
+          Separa la infraestructura de la aplicación<br>(la interfaz de usuario, de los datos).
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          <b>Patrones y estrategias de almacenamiento en caché</b>
+        </p>
+        <ul>
+          <li>Server-side Rendering (SSR)</li>
+          <li>Client-side Rendering (CSR)</li>
+        </ul>
+      </section>
+      <section>
+         <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          <b>Server-side Rendering (SSR)</b>
+        </p>
+        <ul>
+          <li>El servidor retorna una página completa.</li>
+          <li>La página carga CSS, JS y todo el contenido.</li>
+          <li>La página se actualiza recargando el DOM.</li>
+        </ul>
+      </section>
+      <section>
+         <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          <b>Client-side Rendering (CSR)</b>
+        </p>
+        <ul>
+          <li>El servidor retorna una página con CSS y JS.</li>
+          <li>JS hace peticiones para obtener contenido y agregárselo a la página.</li>
+          <li>La página se actualiza recargando sólo el contenido dinámico.</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          <b>Content First</b>
+        </p>
+        <ul>
+          <li>Reordena</li>
+          <li>Reposiciona</li>
+          <li>Reemplaza</li>
+          <li>Remueve (como último recurso)</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>App Shell Architecture</b>
+        </p>
+        <p>
+          <b>Content First</b>
+        </p>
+        <div class="flex">
+          <div class="c2" style="padding: 1rem;">
+            <p>Flexbox</p>
+            <small>
+              <ul>
+                <li>Unidimensional, pensado para el acomodo interno de los elementos, componentes y/o widgets de la UI</li>
+                <li>Tamaño y alineación flexibles</li>
+                <li>Reordenamiento de elementos</li>
+                <li>Mejor rendimiento que los floats</li>
+              </ul>
+            </small>
+          </div>
+          <div class="c2" style="padding: 1rem;">
+            <p>Grid</p>
+            <small>
+              <ul>
+                <li>Bidimensional, pensado para planificar las estructuras y secciones externas de la UI</li>
+                <li>Se complementa con Flexbox</li>
+                <li>Separa el layout del contenido</li>
+                <li>Optimiza la UI</li>
+              </ul>
+            </small>
+          </div>
+        </div>
+        <small><a href="https://ed.team/cursos/css-avanzado" target="_blank">Curso CSS Avanzado: Grid + Flexbox</a></small>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Manifest.json</b>
+        </p>
+        <p>
+          El manifiesto es un archivo JSON que permite controlar cómo se muestra la PWA al usuario en áreas donde normalmente ven apps nativas, además indica su apariencia al iniciarse.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Manifest.json</b>
+        </p>
+        <p>Especifica entre algunas cosas:</p>
+        <ul>
+          <li>Nombre</li>
+          <li>Ícono</li>
+          <li>URL de Inicio</li>
+          <li>Modo de Visualización</li>
+          <li>Orientación</li>
+          <li>Color de Fondo y de Tema</li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Manifest.json</b>
+        </p>
+        <img src="./img/manifest.png" class="sin-fondo" style="max-width: 70%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Manifest.json</b>
+        </p>
+        <h1>Let's to Code! \<div class="carita">XD</div>/</h1>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <p>
+          Son secuencias de comandos que el navegador ejecuta en segundo plano. Te permiten acceder a funciones que no requieren interacción con el usuario, como notificaciones push, sincronización en segundo plano y experiencias sin conexión.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <img src="./img/sw-que-es.png" class="sin-fondo">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <img src="./img/sw-que-es2.png" class="sin-fondo" style="max-width: 60%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <p>
+          Durante el desarrollo, podrás usar el service worker a través de localhost, pero para implementarlo en un sitio deberás configurar HTTPS en tu servidor.
+        </p>
+        <p>
+          Con los service workers puedes tomar el control de una conexión, y crear y filtrar respuestas, por ello es que requiere HTTPs para evitar malos usos y manipulaciones en la red.
+        </p>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <p>Ciclo de Vida</p>
+        <img src="./img/sw-ciclo-vida.png" class="sin-fondo" style="max-width: 60%;">
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <p>Entonces:</p>
+        <ul>
+          <li>Es un proceso en segundo plano en el navegador</li>
+          <li>Tiene un ciclo de vida</li>
+          <li>Requiere <b>https</b></li>
+          <li>Se registra en el objeto <b>navigator</b></li>
+          <li>Se comunica con la aplicación a través de mensajes</li>
+          <li>Hace funciones de proxy</li>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API" target="_blank">Service Worker API</a></li>
+        </ul>
+      </section>
+      <section>
+        <p style="font-size: 120%;">
+          <b>Service Worker</b>
+        </p>
+        <h1>Let's to Code! \<div class="carita">XD</div>/</h1>
       </section>
     </div>
   </div>
